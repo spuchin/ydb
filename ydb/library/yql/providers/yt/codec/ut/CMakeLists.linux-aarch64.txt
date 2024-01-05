@@ -6,6 +6,7 @@
 # original buildsystem will not be accepted.
 
 
+add_subdirectory(no_llvm)
 
 add_executable(ydb-library-yql-providers-yt-codec-ut)
 target_compile_options(ydb-library-yql-providers-yt-codec-ut PRIVATE
@@ -28,6 +29,7 @@ target_link_libraries(ydb-library-yql-providers-yt-codec-ut PUBLIC
   providers-common-codec
   providers-common-mkql
   yt-lib-yson_helpers
+  yt-codec-codegen
 )
 target_link_options(ydb-library-yql-providers-yt-codec-ut PRIVATE
   -ldl
@@ -35,9 +37,6 @@ target_link_options(ydb-library-yql-providers-yt-codec-ut PRIVATE
   -Wl,--no-as-needed
   -fPIC
   -fPIC
-  -lpthread
-  -lrt
-  -ldl
 )
 target_sources(ydb-library-yql-providers-yt-codec-ut PRIVATE
   ${CMAKE_SOURCE_DIR}/ydb/library/yql/providers/yt/codec/yt_codec_io_ut.cpp
@@ -67,6 +66,7 @@ set_yunittest_property(
   PROPERTY
   LABELS
   SMALL
+  $FILTER_ONLY_TEST_TAGS
 )
 set_yunittest_property(
   TEST

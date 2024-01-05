@@ -20,6 +20,7 @@ target_link_libraries(ydb-core-mind-bscontroller-ut_selfheal PUBLIC
   blobstorage-pdisk-mock
   core-mind-bscontroller
   core-tx-scheme_board
+  minikql-comp_nodes-llvm
   udf-service-stub
   yql-sql-pg_dummy
 )
@@ -29,9 +30,6 @@ target_link_options(ydb-core-mind-bscontroller-ut_selfheal PRIVATE
   -Wl,--no-as-needed
   -fPIC
   -fPIC
-  -lpthread
-  -lrt
-  -ldl
 )
 target_sources(ydb-core-mind-bscontroller-ut_selfheal PRIVATE
   ${CMAKE_SOURCE_DIR}/ydb/core/mind/bscontroller/ut_selfheal/main.cpp
@@ -62,6 +60,7 @@ set_yunittest_property(
   PROPERTY
   LABELS
   MEDIUM
+  $FILTER_ONLY_TEST_TAGS
 )
 set_yunittest_property(
   TEST

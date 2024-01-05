@@ -7,6 +7,7 @@
 
 
 add_subdirectory(lib)
+add_subdirectory(ut_balancing)
 add_subdirectory(ut_blob_depot)
 add_subdirectory(ut_blob_depot_fat)
 add_subdirectory(ut_donor)
@@ -37,9 +38,6 @@ target_link_options(ydb-core-blobstorage-ut_blobstorage PRIVATE
   -Wl,--no-as-needed
   -fPIC
   -fPIC
-  -lpthread
-  -lrt
-  -ldl
 )
 target_sources(ydb-core-blobstorage-ut_blobstorage PRIVATE
   ${CMAKE_SOURCE_DIR}/ydb/core/blobstorage/ut_blobstorage/assimilation.cpp
@@ -92,6 +90,7 @@ set_yunittest_property(
   PROPERTY
   LABELS
   MEDIUM
+  $FILTER_ONLY_TEST_TAGS
 )
 set_yunittest_property(
   TEST

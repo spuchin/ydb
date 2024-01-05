@@ -34,6 +34,7 @@ add_subdirectory(ut_rs)
 add_subdirectory(ut_sequence)
 add_subdirectory(ut_snapshot)
 add_subdirectory(ut_stats)
+add_subdirectory(ut_trace)
 add_subdirectory(ut_upload_rows)
 add_subdirectory(ut_volatile)
 add_subdirectory(ut_write)
@@ -123,6 +124,7 @@ target_link_libraries(core-tx-datashard PUBLIC
   cpp-string_utils-quote
   ydb-core-actorlib_impl
   ydb-core-base
+  ydb-core-change_exchange
   ydb-core-engine
   core-engine-minikql
   ydb-core-formats
@@ -280,6 +282,7 @@ target_sources(core-tx-datashard PRIVATE
   ${CMAKE_SOURCE_DIR}/ydb/core/tx/datashard/export_scan.cpp
   ${CMAKE_SOURCE_DIR}/ydb/core/tx/datashard/finalize_build_index_unit.cpp
   ${CMAKE_SOURCE_DIR}/ydb/core/tx/datashard/finish_propose_unit.cpp
+  ${CMAKE_SOURCE_DIR}/ydb/core/tx/datashard/finish_propose_write_unit.cpp
   ${CMAKE_SOURCE_DIR}/ydb/core/tx/datashard/follower_edge.cpp
   ${CMAKE_SOURCE_DIR}/ydb/core/tx/datashard/initiate_build_index_unit.cpp
   ${CMAKE_SOURCE_DIR}/ydb/core/tx/datashard/key_conflicts.cpp
@@ -396,6 +399,7 @@ target_link_libraries(core-tx-datashard.global PUBLIC
   cpp-string_utils-quote
   ydb-core-actorlib_impl
   ydb-core-base
+  ydb-core-change_exchange
   ydb-core-engine
   core-engine-minikql
   ydb-core-formats
