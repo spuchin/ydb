@@ -12,7 +12,6 @@ add_library(minikql-comp_nodes-llvm STATIC)
 set_property(TARGET minikql-comp_nodes-llvm PROPERTY
   LINKER_LANGUAGE CXX
 )
-
 target_compile_options(minikql-comp_nodes-llvm PRIVATE
   -mprfchw
   -DUSE_CURRENT_UDF_ABI_VERSION
