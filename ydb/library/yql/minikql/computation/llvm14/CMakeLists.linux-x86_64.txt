@@ -28,12 +28,6 @@ target_link_libraries(minikql-computation-llvm14 PUBLIC
   contrib-libs-cxxsupp
   yutil
   minikql-codegen-llvm14
-  llvm14-lib-IR
-  lib-ExecutionEngine-MCJIT
-  llvm14-lib-Linker
-  lib-Target-X86
-  Target-X86-AsmParser
-  lib-Transforms-IPO
   libs-apache-arrow
   library-actors-util
   library-cpp-enumbitset

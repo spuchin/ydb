@@ -19,15 +19,6 @@ target_link_libraries(minikql-codegen-llvm14 PUBLIC
   contrib-libs-linux-headers
   contrib-libs-cxxsupp
   yutil
-  llvm14-lib-IR
-  lib-ExecutionEngine-MCJIT
-  llvm14-lib-Linker
-  lib-Target-X86
-  Target-X86-AsmParser
-  Target-X86-Disassembler
-  lib-Transforms-IPO
-  lib-Transforms-ObjCARC
-  lib-ExecutionEngine-PerfJITEvents
   libs-cxxsupp-builtins
   contrib-libs-re2
 )

@@ -26,12 +26,6 @@ target_link_libraries(ydb-library-yql-minikql-comp_nodes-llvm14-ut PUBLIC
   minikql-codegen-llvm14
   minikql-comp_nodes-llvm14
   minikql-invoke_builtins-llvm14
-  llvm14-lib-IR
-  lib-ExecutionEngine-MCJIT
-  llvm14-lib-Linker
-  lib-Target-X86
-  Target-X86-AsmParser
-  lib-Transforms-IPO
   yql-public-udf
   public-udf-arrow
   udf-service-exception_policy

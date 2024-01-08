@@ -31,12 +31,6 @@ target_link_libraries(minikql-comp_nodes-llvm14 PUBLIC
   yutil
   minikql-codegen-llvm14
   minikql-invoke_builtins-llvm14
-  llvm14-lib-IR
-  lib-ExecutionEngine-MCJIT
-  llvm14-lib-Linker
-  lib-Target-X86
-  Target-X86-AsmParser
-  lib-Transforms-IPO
   libs-apache-arrow
   ydb-library-binary_json
   library-yql-minikql
