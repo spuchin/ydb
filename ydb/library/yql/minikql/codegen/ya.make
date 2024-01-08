@@ -1,1 +1,7 @@
-RECURSE(no_llvm llvm llvm14)
+RECURSE(no_llvm llvm)
+
+IF (NOT EXPORT_CMAKE)
+    RECURSE(
+        llvm14
+    )
+ENDIF()
