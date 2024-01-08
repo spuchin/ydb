@@ -1,4 +1,4 @@
-find $1 -name 'CMakeLists.*.txt' | xargs grep -l add_library | xargs grep -L target_sources | grep -e '/llvm[0-9]*/'| while read x;do
+find $1 -name 'CMakeLists.*.txt' | xargs grep -l add_library | xargs grep -L target_sources | grep -e '/\(no_\|\)llvm[0-9]*/'| while read x;do
   echo "$x"
   libname=`grep add_library $x | awk -F'(' '{print $2}' | awk -F'[ )]' '{print $1}'`
   echo $libname

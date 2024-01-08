@@ -20,3 +20,4 @@ target_link_libraries(contrib-libs-llvm12 INTERFACE
   contrib-libs-cxxsupp
   yutil
 )
+target_sources( contrib-libs-llvm12 PRIVATE dummy.cpp )

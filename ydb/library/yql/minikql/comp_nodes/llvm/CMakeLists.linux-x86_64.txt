@@ -13,10 +13,6 @@ set_property(TARGET minikql-comp_nodes-llvm PROPERTY
   LINKER_LANGUAGE CXX
 )
 
-target_sources(minikql-comp_nodes-llvm PRIVATE
-  dummy.cpp
-)
-
 target_compile_options(minikql-comp_nodes-llvm PRIVATE
   -mprfchw
   -DUSE_CURRENT_UDF_ABI_VERSION
@@ -73,3 +69,4 @@ copy_file(
   ${CMAKE_SOURCE_DIR}/ydb/library/yql/minikql/invoke_builtins/mkql_builtins_decimal.h.txt
   ${CMAKE_BINARY_DIR}/ydb/library/yql/minikql/comp_nodes/llvm/ydb/library/yql/minikql/invoke_builtins/mkql_builtins_decimal.h
 )
+target_sources( minikql-comp_nodes-llvm PRIVATE dummy.cpp )
