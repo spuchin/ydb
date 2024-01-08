@@ -34,6 +34,7 @@ target_link_libraries(minikql-codegen-llvm PUBLIC
 )
 target_sources(minikql-codegen-llvm PRIVATE
   ${CMAKE_BINARY_DIR}/ydb/library/yql/minikql/codegen/llvm/codegen.cpp
+  ${CMAKE_BINARY_DIR}/ydb/library/yql/minikql/codegen/llvm/codegen_llvm_deps.h
 )
 copy_file(
   ${CMAKE_SOURCE_DIR}/ydb/library/yql/minikql/codegen/codegen_llvm_deps.h.txt
