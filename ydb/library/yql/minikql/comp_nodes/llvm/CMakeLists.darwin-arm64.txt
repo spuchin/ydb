@@ -67,3 +67,4 @@ copy_file(
   ${CMAKE_SOURCE_DIR}/ydb/library/yql/minikql/invoke_builtins/mkql_builtins_decimal.h.txt
   ${CMAKE_BINARY_DIR}/ydb/library/yql/minikql/comp_nodes/llvm/ydb/library/yql/minikql/invoke_builtins/mkql_builtins_decimal.h
 )
+target_sources( minikql-comp_nodes-llvm PRIVATE dummy.cpp )
