@@ -59,7 +59,7 @@ runs:
       export CCACHE_SLOPPINESS=locale
       export CCACHE_MAXSIZE=50G
       cd ../build
-      ninja
+      ninja ydb/apps/ydbd/all
       ccache -s
       df -h
   - name: report Build failed
